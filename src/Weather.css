@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-  color: #878787;
+  color: #474747;
   font-size: 24px;
   font-weight: 100;
   margin: 0;
@@ -19,6 +19,7 @@ button {
 input[type="text"] {
   border-radius: 2px;
   border: none;
+  background-color: #ffffff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   height: 44px;
   outline: 0;
@@ -26,14 +27,16 @@ input[type="text"] {
   width: 300px;
 }
 
-.btn {
+.btn-outline-dark {
   border-radius: 2px;
-  color: #fff;
+  color: #343a40;
   height: 44px;
+  margin-left: 5px;
 }
 
-.btn primary {
-  background-color: rgb(245, 188, 188);
+.btn-outline-info {
+  border-radius: 2px;
+  height: 44px;
 }
 
 .weather-icon {

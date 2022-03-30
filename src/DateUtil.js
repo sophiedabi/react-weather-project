@@ -23,9 +23,9 @@ export default class DateUtil {
 
   time() {
     let minutes = this.date.getMinutes();
-    if (minutes < 10) minutes = `${0}`;
+    if (minutes < 10) minutes = `0${this.date.getMinutes()}`;
 
-    return `${this.date.getHours()}:${minutes}`;
+    return `${this.date.getHours()}:${this.date.getMinutes()}`;
   }
 
   dayTime() {

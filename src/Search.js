@@ -29,7 +29,7 @@ export default class Search extends Component {
           onChange={(event) => this._handleChange(event)}
           value={this.state.value}
         />
-        <input type="submit" value="Search" className="btn btn-primary" />
+        <input type="submit" value="Search" className="btn btn-outline-dark" />
       </form>
     );
   }

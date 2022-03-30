@@ -13,10 +13,10 @@ export default class CurrentLocation extends Component {
   render() {
     return (
       <button
-        className="float-left btn btn-success"
+        className="float-left btn btn-outline-info"
         onClick={(event) => this._click(event)}
       >
-        📍
+        📍 Your location
       </button>
     );
   }
