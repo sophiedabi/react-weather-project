@@ -11,7 +11,7 @@ export default class DateUtil {
       "Wednesday",
       "Thursday",
       "Friday",
-      "Saturday"
+      "Saturday",
     ];
 
     if (short) {
@@ -23,7 +23,7 @@ export default class DateUtil {
 
   time() {
     let minutes = this.date.getMinutes();
-    if (minutes < 10) minutes = `${0}minutes`;
+    if (minutes < 10) minutes = `${0}`;
 
     return `${this.date.getHours()}:${minutes}`;
   }

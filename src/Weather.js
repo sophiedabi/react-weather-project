@@ -11,11 +11,11 @@ import Forecast from "./Forecast";
 
 export default class Weather extends Component {
   static propTypes = {
-    city: PropTypes.string.isRequired
+    city: PropTypes.string.isRequired,
   };
 
   state = {
-    city: this.props.city
+    city: this.props.city,
   };
 
   componentWillMount() {
@@ -26,7 +26,7 @@ export default class Weather extends Component {
     let url = `${Api.url}/data/2.5/weather?appid=${
       Api.key
     }&units=metric&${params}`;
-    axios.get(url).then(response => {
+    axios.get(url).then((response) => {
       this.setState({
         city: response.data.name,
         weather: {
@@ -35,8 +35,8 @@ export default class Weather extends Component {
           precipitation: Math.round(response.data.main.humidity) + "%",
           temperature: Math.round(response.data.main.temp),
           time: new DateUtil(new Date(response.data.dt * 1000)).dayTime(),
-          wind: Math.round(response.data.wind.speed) + "km/h"
-        }
+          wind: Math.round(response.data.wind.speed) + "km/h",
+        },
       });
     });
   }
@@ -45,7 +45,7 @@ export default class Weather extends Component {
     this.refreshWeatherFromParams(`lat=${latitude}&lon=${longitude}`);
   };
 
-  refresh = city => {
+  refresh = (city) => {
     this.refreshWeatherFromParams(`q=${city}`);
   };
 
@@ -101,7 +101,7 @@ export default class Weather extends Component {
     } else {
       return (
         <div>
-          App is loading, <em>please wait...</em>
+          Weather is loading, <em>please wait...</em>
         </div>
       );
     }
