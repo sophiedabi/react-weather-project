@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import Main from "./Main";
 
 export default class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ""
+      value: "",
     };
   }
 
@@ -19,13 +20,13 @@ export default class Search extends Component {
 
   render() {
     return (
-      <form className="float-left" onClick={event => this._submit(event)}>
+      <form className="float-left" onClick={(event) => this._submit(event)}>
         <input
           type="text"
           placeholder="Enter a city"
           autoComplete="off"
           autoFocus="on"
-          onChange={event => this._handleChange(event)}
+          onChange={(event) => this._handleChange(event)}
           value={this.state.value}
         />
         <input type="submit" value="Search" className="btn btn-primary" />
