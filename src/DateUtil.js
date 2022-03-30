@@ -23,7 +23,7 @@ export default class DateUtil {
 
   time() {
     let minutes = this.date.getMinutes();
-    if (minutes < 10) minutes = `0${this.date.getMinutes()}`;
+    if (minutes < 10) minutes = `${0}}`;
 
     return `${this.date.getHours()}:${this.date.getMinutes()}`;
   }
