@@ -16,10 +16,9 @@ export default class CurrentLocation extends Component {
         className="float-left btn btn-outline-info"
         onClick={(event) => this._click(event)}
       >
-        <span>
-          {" "}
-          <img alt="map-pin">📍</img>
-        </span>{" "}
+        <span role="img" aria-label="map-pin">
+          📍
+        </span>
         Your location
       </button>
     );
